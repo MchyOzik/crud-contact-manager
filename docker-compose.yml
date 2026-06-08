@@ -6,15 +6,15 @@ services:
     container_name: crud_postgres
     restart: always
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: secretpass123
-      POSTGRES_DB: crud_app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: TERSERAH16
+      POSTGRES_DB: app_mchyozik
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d crud_app"]
+      test: ["CMD-SHELL", "pg_isready -U admin -d app_mchyozik"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -28,10 +28,10 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DB_HOST: db
-      DB_USER: admin
-      DB_PASS: secretpass123
-      DB_NAME: crud_app
+      DB_HOST: database-1.cpljhpnpvnnj.us-east-1.rds.amazonaws.com
+      DB_USER: postgres
+      DB_PASS: TERSERAH16
+      DB_NAME: app_mchyozik
     depends_on:
       db:
         condition: service_healthy
