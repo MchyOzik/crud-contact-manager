@@ -52,4 +52,4 @@ jobs:
         aws ecs update-service \
         --cluster ${{ env.ECS_CLUSTER }} \
         --service ${{ env.ECS_SERVICE }} \
-        --task-definition app \
+        --task-definition app 
