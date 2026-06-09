@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: app
-  ECS_SERVICE: app-service-0o1jo4bh
+  ECS_SERVICE: app-service-n96btk2t
   ECS_CLUSTER: app-o
   ACCOUNT_ID: 641569079492
                                                
