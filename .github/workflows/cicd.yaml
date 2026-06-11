@@ -8,7 +8,7 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: app
   ECS_SERVICE: app-service-n96btk2t
-  ECS_CLUSTER: aop
+  ECS_CLUSTER: app-aaa
   ACCOUNT_ID: 641569079492
                                                
 jobs:
